@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomo | Salesforce PFML Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #030712; color: #f3f4f6; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .glass { background: rgba(17, 24, 39, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gradient-text { background: linear-gradient(90deg, #22d3ee, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .bento-card:hover { border-color: #22d3ee; transition: 0.3s; transform: translateY(-4px); }
+    </style>
+</head>
+<body class="selection:bg-cyan-500/30">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-4">
+        <div class="max-w-6xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center">
+            <span class="mono text-cyan-400 font-bold tracking-tighter uppercase">Tomo.Systems</span>
+            <div class="space-x-8 text-sm font-medium hidden md:flex">
+                <a href="#work" class="hover:text-cyan-400 transition">Expertise</a>
+                <a href="#ai" class="hover:text-cyan-400 transition">AI Strategy</a>
+                <a href="mailto:your-email@example.com" class="px-4 py-2 bg-cyan-500/10 border border-cyan-500/50 rounded-lg text-cyan-400 hover:bg-cyan-500/20 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-48 pb-32 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass text-xs mono text-cyan-400 mb-6">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                </span>
+                Deployment: DC & CO Active
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">
+                Policy into <span class="gradient-text">Platforms.</span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                Salesforce Functional Consultant specializing in the complex intersection of state legislative policy and enterprise architecture.
+            </p>
+        </div>
+    </header>
+
+    <!-- Bento Grid Section -->
+    <main id="work" class="max-w-6xl mx-auto px-6 py-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- CO FAMLI Card -->
+            <div class="md:col-span-2 glass p-8 rounded-3xl bento-card">
+                <i data-lucide="bar-chart-3" class="text-cyan-400 mb-4"></i>
+                <h3 class="text-2xl font-bold mb-2">Colorado FAMLI</h3>
+                <p class="text-gray-400 mb-6">Architecting the functional logic for a statewide tax engine. Managing premium collection models and employer portals within the Salesforce ecosystem.</p>
+                <div class="flex gap-3 text-xs mono">
+                    <span class="px-2 py-1 bg-white/5 rounded border border-white/10">Tax Infrastructure</span>
+                    <span class="px-2 py-1 bg-white/5 rounded border border-white/10">Revenue Logic</span>
+                </div>
+            </div>
+
+            <!-- DC PFL Card -->
+            <div class="glass p-8 rounded-3xl bento-card">
+                <i data-lucide="users" class="text-indigo-400 mb-4"></i>
+                <h3 class="text-2xl font-bold mb-2">DC Paid Leave</h3>
+                <p class="text-gray-400 mb-6">Translating bonding and medical leave rules into claimant benefit journeys.</p>
+                <div class="flex gap-3 text-xs mono">
+                    <span class="px-2 py-1 bg-white/5 rounded border border-white/10">Benefits Admin</span>
+                </div>
+            </div>
+
+            <!-- AI Strategy Card -->
+            <div id="ai" class="glass p-8 rounded-3xl bento-card">
+                <i data-lucide="zap" class="text-yellow-400 mb-4"></i>
+                <h3 class="text-2xl font-bold mb-2">Agentic UAT</h3>
+                <p class="text-gray-400">Leveraging AI prompt engineering to synthesize thousands of user feedback points, accelerating implementation by 40%.</p>
+            </div>
+
+            <!-- Salesforce Cert Card -->
+            <div class="md:col-span-2 glass p-8 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6 border-l-4 border-l-cyan-500">
+                <div>
+                    <h3 class="text-2xl font-bold">Platform Fluency</h3>
+                    <p class="text-gray-400 mt-2">Certified Salesforce Business Analyst focused on Public Sector Solutions (PSS).</p>
+                </div>
+                <div class="px-6 py-3 bg-cyan-500 text-black font-bold rounded-xl shadow-[0_0_20px_rgba(34,211,238,0.4)]">
+                    SF BA CERTIFIED
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-20 text-center border-t border-white/5">
+        <p class="mono text-xs text-gray-500 uppercase tracking-widest">
+            Based in the DMV | Maryland Implementation Ready
+        </p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

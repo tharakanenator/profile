@@ -1,4 +1,3 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://github.com/tharakanenator/profile/sitemap.xml
+    Allow: /
+    Sitemap: https://kuttiyil.net/sitemap.xml

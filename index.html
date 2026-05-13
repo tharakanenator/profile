@@ -340,6 +340,37 @@
       lucide.createIcons();
     </script>
 </body>
+<script>
+  async function loadTIL() {
+    try {
+      const response = await fetch('./til.json');
+      const data = await response.json();
+      const container = document.querySelector('.til-grid');
+      
+      // Clear container first
+      container.innerHTML = '';
+
+      data.forEach(item => {
+        const card = `
+          <article class="til-card">
+            <div class="til-header">
+              <span class="til-tag">#${item.tag}</span>
+              <time class="til-date">${item.date}</time>
+            </div>
+            <h3 class="til-card-title">${item.title}</h3>
+            <p class="til-text">${item.content}</p>
+          </article>`;
+        container.innerHTML += card;
+      });
+    } catch (error) {
+      console.error('Error loading TIL entries:', error);
+    }
+  }
+
+  // Run the function when the page loads
+  document.addEventListener('DOMContentLoaded', loadTIL);
+</script>
+
 </body>
    
 </html>

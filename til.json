@@ -1,8 +1,14 @@
 [
   {
-    "title": "Using GitHub Codespaces on iPad",
-    "date": "May 12, 2026",
-    "tag": "Workflow",
-    "content": "Discovered that I can manage my entire web project using a cloud-based VS Code instance directly in Safari."
+    "title": "GitHub Codespaces on iPad",
+    "date": "MAY 12, 2026",
+    "tag": "#WORKFLOW",
+    "content": "Successfully configured a cloud-based development environment to manage my personal brand site using only an iPad Pro and Safari."
+  },
+  {
+    "title": "Salesforce PSS Data Mapping",
+    "date": "MAY 10, 2026",
+    "tag": "#SALESFORCE",
+    "content": "Deep dive into the Individual Application object structure for state benefit intake forms. Crucial for eligibility logic."
   }
 ]

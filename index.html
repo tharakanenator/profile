@@ -352,9 +352,21 @@
     </div>
 
     <!-- This is where the JavaScript will "inject" the cards -->
-    <div class="til-grid grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Cards will appear here -->
-    </div>
+    <div class="til-grid">
+  {% for post in site.posts %}
+    <a href="{{ post.url | relative_url }}" class="til-card-link">
+      <article class="til-card">
+        <div class="til-header">
+          <span class="til-tag">#{{ post.category }}</span>
+          <time class="til-date">{{ post.date | date: "%b %d, %Y" }}</time>
+        </div>
+        <h3 class="til-card-title">{{ post.title }}</h3>
+        <p class="til-text">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+        <span class="read-more">Read more →</span>
+      </article>
+    </a>
+  {% endfor %}
+</div>
 </section>
 
     <!-- Footer -->

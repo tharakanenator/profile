@@ -1,13 +1,33 @@
 ---
 layout: default
 ---
-<main class="max-w-3xl mx-auto px-6 py-12">
-    <header class="mb-10">
-        <span class="text-indigo-500 mono uppercase tracking-widest text-xs">#{{ page.category }}</span>
-        <h1 class="text-4xl font-bold text-white mt-2">{{ page.title }}</h1>
+<!-- Removed the <main> tag because default.html already provides it -->
+<!-- Using <article> for better SEO and structure -->
+<article class="max-w-3xl mx-auto px-6 pb-20">
+    
+    <header class="mb-12 border-b border-white/5 pb-8">
+        <div class="flex items-center space-x-3 mb-3">
+            <span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 mono uppercase tracking-tighter text-[10px] border border-cyan-500/20 rounded">
+                #{{ page.category }}
+            </span>
+            <span class="text-gray-600 mono text-[10px] uppercase tracking-widest">
+                {{ page.date | date: "%B %d, %Y" }}
+            </span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight">
+            {{ page.title }}
+        </h1>
     </header>
 
-    <article class="prose prose-invert prose-indigo max-w-none">
+    <!-- Switched to prose-cyan to match your "Thomas Tharakan" branding -->
+    <!-- Added prose-lg for better readability on long articles -->
+    <div class="prose prose-invert prose-cyan max-w-none 
+                prose-headings:font-bold prose-headings:tracking-tight
+                prose-p:leading-relaxed prose-p:text-gray-400
+                prose-li:text-gray-400
+                prose-strong:text-white
+                prose-blockquote:border-l-cyan-500 prose-blockquote:bg-cyan-500/5 prose-blockquote:py-1 prose-blockquote:px-6 prose-blockquote:rounded-r-lg">
         {{ content }}
-    </article>
-</main>
+    </div>
+
+</article>

@@ -14,6 +14,7 @@ If you try to make every single person in a 50-person UAT session happy, you wil
 ---
 
 ## 1. The Myth of Universal Satisfaction
+
 In a large group, stakeholders have competing interests. Marketing wants a specific aesthetic; Operations wants speed; Legal and Compliance will want strict language. If you treat UAT as a democratic design session, the project will stall in "analysis paralysis."
 
 **The Reality Check:** You cannot please every stakeholder. Accepting this early is liberating. Your job isn't to be a people-pleaser; it's to be a gatekeeper for the project’s scope and functional integrity. A UAT should be a UAT and nothing more. It is a vessel for stakeholders to test intended functionality and accept the agreed upon changes. 
@@ -22,10 +23,10 @@ In a large group, stakeholders have competing interests. Marketing wants a speci
 The chaos of UAT usually stems from a misunderstanding of what the session is actually for. Many stakeholders view UAT as a "First Look" or a "Suggestion Box" phase.
 
 To prevent this, you must communicate the "Rules of Engagement" well before the first login:
-* **Define the Goal:** State clearly that this is a verification of pre-agreed requirements.
-* **The "No New Features" Rule:** Explicitly mention that UAT is not the time for "wouldn't it be nice if..." suggestions.
-* **Severity Definitions:** Provide a rubric for what constitutes a "Blocker" versus a "Cosmetic Enhancement."
-* **Always have a kickoff call:** No matter how experienced your UAT Testers are, always have a kickoff call, define expectations, passing criteria and other pertinent information about the upcoming session in advance.
+- **Define the Goal:** State clearly that this is a verification of pre-agreed requirements.
+- **The "No New Features" Rule:** Explicitly mention that UAT is not the time for "wouldn't it be nice if..." suggestions.
+- **Severity Definitions:** Provide a rubric for what constitutes a "Blocker" versus a "Cosmetic Enhancement."
+- **Always have a kickoff call:** No matter how experienced your UAT Testers are, always have a kickoff call, define expectations, passing criteria and other pertinent information about the upcoming session in advance.
 
 ## 3. The Core Intent: Validating the "Signed Off"
 This is the most critical pillar of successful UAT. You must constantly emphasize one mantra:

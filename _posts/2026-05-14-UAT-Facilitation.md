@@ -31,7 +31,7 @@ To prevent this, you must communicate the "Rules of Engagement" well before the 
 ## 3. The Core Intent: Validating the "Signed Off"
 This is the most critical pillar of successful UAT. You must constantly emphasize one mantra:
 
-> **"The intent of UAT is for an end user to test signed-off requirements which have been developed into the product."**
+> **The intent of UAT is for an end user to test signed-off requirements which have been developed into the product.**
 
 If a stakeholder complains that a button should be blue instead of green, but the signed-off design specification said green, that is not a UAT defect. It is a "Change Request" for a future version. 
 

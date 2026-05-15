@@ -1,0 +1,32 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | Your Brand</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body class="bg-[#0a0a0a] text-gray-300 antialiased">
+    
+    <!-- YOUR NAV BAR (Copy exactly from your index.html) -->
+    <nav class="p-6 border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="{{ '/' | relative_url }}" class="font-bold text-white tracking-tighter text-xl">TOMO<span class="text-indigo-500">.</span></a>
+            <!-- Add your other links here -->
+        </div>
+    </nav>
+
+    {{ content }}
+
+    <!-- YOUR FOOTER -->
+    <footer class="py-10 text-center border-t border-white/5">
+        <p class="text-xs text-gray-500 uppercase mono">Based in Arlington, VA</p>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

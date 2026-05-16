@@ -7,7 +7,7 @@ tags: [Business Analyst, AI Tools, Prompt Engineering, Agile User Stories]
 description: "Discover how Business Analysts can leverage AI tools like ChatGPT, Claude, and Gemini to automate documentation, cleanup data, and accelerate system design safely."
 ---
 
-# Know where to use AI 
+# The Business Analyst's AI Cheat Sheet
 
 You have Claude, Gemini, Co-Pilot, ChatGPT, Grok—but do you know where and how to use them? I'll be honest, when ChatGPT rolled out to the public, I was a little skeptical of its capabilities. I neither believed it could make a dent in the work I do, nor thought it would be capable of surpassing the skillset I have acquired over my career.
 

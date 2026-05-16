@@ -3,6 +3,8 @@ layout: post
 title: "Stakeholder Relationships"
 date: 2026-05-13
 category: Clientrelationships
+tags: [Business Analyst, Client, Client Relationships]
+description: "Discover how should a Business Analyst maintain client relationships"
 ---
 
 # Beyond the Playbook: The Human Element of Client Relationships

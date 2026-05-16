@@ -3,6 +3,8 @@ layout: post
 title: "Performing Large Group Testing"
 date: 2026-05-14
 category: Useracceptancetesting
+tags: [Business Analyst, UAT, User Acceptance Testing]
+description: "Discover how should a Business Analyst facilitate large group User Acceptance Testing Sessions"
 ---
 
 # The Art of Negotiating the "Happy Medium" in Large-Scale UAT

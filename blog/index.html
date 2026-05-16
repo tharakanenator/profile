@@ -4,44 +4,44 @@ title: "Insights & Field Notes"
 ---
 
 <section class="max-w-6xl mx-auto px-6 pb-24">
-   
-<!-- Clean Blog Header with Technical Terminal Widget -->
-<header class="mb-20 text-center md:text-left max-w-3xl">
-    <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6">
-        Field <span class="bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">Notes.</span>
-    </h1>
-    <p class="text-gray-400 text-lg md:text-xl leading-relaxed font-light">
-        A running log of architecture patterns, statutory systems delivery, and practical engineering insights gathered from large-scale implementations.
-    </p>
-</header>
+    <!-- Clean Blog Header with Centered Ambient Glow -->
+    <header class="relative mb-20 py-12 text-center overflow-hidden">
+        <!-- The Subtle Glow Layer (Centered behind text) -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-    
-   <!-- The Grid of All Posts -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    {% for post in site.posts %}
-    <!-- Container is now cleanly styled identically to the homepage loop -->
-    <a href="{{ post.url | relative_url }}" class="block p-6 glass rounded-3xl border border-white/5 hover:border-indigo-500/50 hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between h-full">
-        <div>
-            <div class="flex justify-between items-center mb-4">
-                <span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 mono uppercase text-[10px] border border-cyan-500/20 rounded">
-                    #{{ post.category }}
-                </span>
-                <time class="text-[10px] text-gray-500 mono">{{ post.date | date: "%b %d, %Y" }}</time>
-            </div>
-            <!-- Title turns crisp white on hover, matching the core interactive style -->
-            <h3 class="text-xl font-bold text-gray-200 group-hover:text-white transition-colors mb-3">
-                {{ post.title }}
-            </h3>
-            <p class="text-sm text-gray-400 leading-relaxed mb-6">
-                {{ post.excerpt | strip_html | truncatewords: 20 }}
+        <div class="max-w-3xl relative z-10 mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-4 text-white">
+                Field <span class="bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">Notes.</span>
+            </h1>
+            <p class="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 via-gray-400 to-gray-500 text-lg md:text-xl leading-relaxed mx-auto">
+                Tactical insights on Salesforce architecture, statutory analysis, and navigating complex software delivery.
             </p>
         </div>
-        
-        <!-- Interactive indicator changes text color matching your footer notes design -->
-        <span class="text-xs text-indigo-400 group-hover:text-indigo-300 font-medium flex items-center gap-1 transition-colors mt-auto">
-            Read note <i data-lucide="arrow-right" class="w-3 h-3 group-hover:translate-x-0.5 transition-transform"></i>
-        </span>
-    </a>
-    {% endfor %}
-</div>
+    </header>
+
+    <!-- The Grid of All Posts -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {% for post in site.posts %}
+        <a href="{{ post.url | relative_url }}" class="block p-6 glass rounded-3xl border border-white/5 hover:border-indigo-500/50 hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between h-full">
+            <div>
+                <div class="flex justify-between items-center mb-4">
+                    <span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 mono uppercase text-[10px] border border-cyan-500/20 rounded">
+                        #{{ post.category }}
+                    </span>
+                    <time class="text-[10px] text-gray-500 mono">{{ post.date | date: "%b %d, %Y" }}</time>
+                </div>
+                <h3 class="text-xl font-bold text-gray-200 group-hover:text-white transition-colors mb-3">
+                    {{ post.title }}
+                </h3>
+                <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                    {{ post.excerpt | strip_html | truncatewords: 20 }}
+                </p>
+            </div>
+            
+            <span class="text-xs text-indigo-400 group-hover:text-indigo-300 font-medium flex items-center gap-1 transition-colors mt-auto">
+                Read note <i data-lucide="arrow-right" class="w-3 h-3 group-hover:translate-x-0.5 transition-transform"></i>
+            </span>
+        </a>
+        {% endfor %}
+    </div>
 </section>

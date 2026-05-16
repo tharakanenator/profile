@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link class="rounded" rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
@@ -17,7 +17,7 @@
     <!-- Canonical Link (Crucial for Custom Domains) -->
     <link rel="canonical" href="https://kuttiyil.net/" />
     
-    <!-- Google & Bing Search Console Verification (Replace 'YOUR_CODE_HERE' with the code from Google) -->
+    <!-- Google & Bing Search Console Verification -->
     <meta name="google-site-verification" content="YOUR_CODE_HERE" />
     <meta name="msvalidate.01" content="465BC0C4029B2A06C8BADE42B4683C2F" />
    <!-- Open Graph / LinkedIn -->
@@ -62,29 +62,27 @@
             to { transform: translateY(0); opacity: 1; }
         }
         .til-card { 
-    background: rgba(255, 255, 255, 0.03); 
-    border: 1px solid rgba(255, 255, 255, 0.05); 
-    border-radius: 1.5rem; 
-    padding: 1.5rem;
-    transition: 0.3s;
-}
-.til-card:hover { 
-    border-color: #818cf8; /* Indigo hover to contrast with your Cyan projects */
-    transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.05);
-}
-.til-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #818cf8; text-transform: uppercase; letter-spacing: 0.05em; }
-
+            background: rgba(255, 255, 255, 0.03); 
+            border: 1px solid rgba(255, 255, 255, 0.05); 
+            border-radius: 1.5rem; 
+            padding: 1.5rem;
+            transition: 0.3s;
+        }
+        .til-card:hover { 
+            border-color: #818cf8; 
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .til-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #818cf8; text-transform: uppercase; letter-spacing: 0.05em; }
     </style>
 </head>
 <body class="selection:bg-cyan-500/30">
 
     <!-- Navigation -->
-<!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 px-6 py-4">
         <div class="max-w-6xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center">
             <!-- Brand -->
-            <span class="mono text-cyan-400 font-bold tracking-tighter uppercase">Thomas Tharakan Kuttiyil Oommen</span>
+            <span class="mono text-cyan-400 font-bold tracking-tighter uppercase text-xs md:text-sm">Thomas Tharakan Kuttiyil Oommen</span>
             
             <!-- Links Container -->
             <div class="flex items-center space-x-8">
@@ -92,40 +90,37 @@
                     <a href="#expertise" class="hover:text-cyan-400 transition py-2">Expertise</a>
                     <a href="#tech-stack" class="hover:text-cyan-400 transition py-2">Tech Stack</a>
                     <a href="#work" class="hover:text-cyan-400 transition py-2">Projects</a>
-                    <a href="#til" class="hover:text-cyan-400 transition py-2">Blog</a>
+                    <!-- FIX 1: Linked directly to the clean directory URL -->
+                    <a href="{{ '/blog/' | relative_url }}" class="text-indigo-400 hover:text-indigo-300 transition py-2 font-semibold">Insights</a>
                 </div>
             
                 <!-- Contact & Social -->
-               <!-- Contact & Social -->
                 <div class="flex items-center gap-4">
-                <a href="mailto:thomas@kuttiyil.net" 
-                class="px-4 py-2 bg-cyan-500/10 border border-cyan-500/50 rounded-lg text-cyan-400 hover:bg-cyan-500/20 transition text-sm font-medium">
-                    Contact
-                </a>
-                
-                <!-- LinkedIn SVG Icon -->
-                <a href="https://linkedin.com/in/thomas-tharakan/" target="_blank" class="text-gray-400 hover:text-cyan-400 transition" aria-label="LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                        <rect width="4" height="12" x="2" y="9"></rect>
-                        <circle cx="4" cy="4" r="2"></circle>
-                    </svg>
-                </a>
+                    <a href="mailto:thomas@kuttiyil.net" 
+                       class="px-4 py-2 bg-cyan-500/10 border border-cyan-500/50 rounded-lg text-cyan-400 hover:bg-cyan-500/20 transition text-sm font-medium">
+                        Contact
+                    </a>
+                    
+                    <a href="https://linkedin.com/in/thomas-tharakan/" target="_blank" class="text-gray-400 hover:text-cyan-400 transition" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect width="4" height="12" x="2" y="9"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
 
-                <!-- GitHub SVG Icon -->
-                <a href="https://github.com/tharakanenator" target="_blank" class="text-gray-400 hover:text-cyan-400 transition" aria-label="GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
-                <path d="M9 18c-4.51 2-5-2-7-2"></path>
-                </svg>
-                </a>
-            </div>
+                    <a href="https://github.com/tharakanenator" target="_blank" class="text-gray-400 hover:text-cyan-400 transition" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    
     <header class="relative pt-48 pb-32 px-6">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
             
@@ -147,49 +142,45 @@
                     Salesforce Functional Consultant specializing in the complex intersection of state legislative policy and enterprise architecture.
                 </p>
                 <div class="flex flex-col sm:flex-row items-center gap-4 mt-8">
-    <!-- Main Call to Action -->
-    <a href="#expertise" class="w-full sm:w-auto px-6 py-3 bg-white text-black font-bold rounded-xl hover:bg-cyan-400 transition shadow-lg shadow-white/5 text-center whitespace-nowrap text-sm md:text-base">
-        View Expertise
-    </a>
+                    <a href="#expertise" class="w-full sm:w-auto px-6 py-3 bg-white text-black font-bold rounded-xl hover:bg-cyan-400 transition shadow-lg shadow-white/5 text-center whitespace-nowrap text-sm md:text-base">
+                        View Expertise
+                    </a>
 
-    <!-- Secondary LinkedIn Button -->
-    <a href="https://linkedin.com/in/thomas-tharakan" target="_blank" class="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 glass rounded-xl border border-white/10 hover:border-cyan-500/50 hover:text-cyan-400 transition group whitespace-nowrap">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 group-hover:text-cyan-400">
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-            <rect width="4" height="12" x="2" y="9"></rect>
-            <circle cx="4" cy="4" r="2"></circle>
-        </svg>
-        <span class="text-sm font-medium">Professional Profile</span>
-    </a>
-</div>
+                    <a href="https://linkedin.com/in/thomas-tharakan" target="_blank" class="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 glass rounded-xl border border-white/10 hover:border-cyan-500/50 hover:text-cyan-400 transition group whitespace-nowrap">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 group-hover:text-cyan-400">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect width="4" height="12" x="2" y="9"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        <span class="text-sm font-medium">Professional Profile</span>
+                    </a>
+                </div>
             </div>
-<section class="max-w-6xl mx-auto px-6 py-12 border-y border-white/5 bg-white/[0.02]">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        <div>
-            <div class="text-3xl font-bold text-cyan-400 font-mono">2+</div>
-            <div class="text-xs uppercase tracking-widest text-gray-500 mt-1">State PFML Programs</div>
-        </div>
-        <div>
-            <div class="text-3xl font-bold text-cyan-400 font-mono">1M+</div>
-            <div class="text-xs uppercase tracking-widest text-gray-500 mt-1">Citizens Served</div>
-        </div>
-       
-        <div>
-            <div class="text-3xl font-bold text-cyan-400 font-mono">Cert</div>
-            <div class="text-xs uppercase tracking-widest text-gray-500 mt-1">Salesforce Business Analyst</div>
-        </div>
-    </div>
-</section>
+
+            <!-- Stats Section -->
+            <section class="max-w-6xl mx-auto px-6 py-12 border-y border-white/5 bg-white/[0.02]">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-3xl font-bold text-cyan-400 font-mono">2+</div>
+                        <div class="text-xs uppercase tracking-widest text-gray-500 mt-1">State PFML Programs</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-cyan-400 font-mono">1M+</div>
+                        <div class="text-xs uppercase tracking-widest text-gray-500 mt-1">Citizens Served</div>
+                    </div>
+                   
+                    <div>
+                        <div class="text-3xl font-bold text-cyan-400 font-mono">Cert</div>
+                        <div class="text-xs uppercase tracking-widest text-gray-500 mt-1">Salesforce Business Analyst</div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Photo Container -->
             <div class="relative group">
-                <!-- Glowing background effect -->
                 <div class="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-indigo-500 rounded-full blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-                
-                <!-- The actual image -->
                 <img src="profile.jpg" alt="Thomas Tharakan Kuttiyil Oommen" 
                      class="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-white/5 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
-                
-                <!-- Floating badge -->
                 <div class="absolute bottom-4 right-4 glass p-3 rounded-2xl border border-cyan-500/30 animate-bounce">
                     <i data-lucide="shield-check" class="text-cyan-400 w-6 h-6"></i>
                 </div>
@@ -197,111 +188,108 @@
 
         </div>
     </header>
+
+    <!-- Expertise Section -->
     <section id="expertise" class="max-w-6xl mx-auto px-6 py-20 border-t border-white/5">
-    <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
-        <span class="h-px w-12 bg-cyan-500"></span>
-        Functional Ownership
-    </h2>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <!-- Colorado: Payments & Interfaces -->
-        <div class="space-y-4">
-            <h3 class="text-xl font-mono text-cyan-400">01. Colorado FAMLI | Interfaces and Payment Systems</h3>
-            <p class="text-gray-400 leading-relaxed">
-                Functional Lead for the Payments and Interface modules within the statewide benefits and tax. Designed the logic for premium collections, employer financial tracking, and secure data exchange between Salesforce and external state financial systems.
-            </p>
-            <div class="flex flex-wrap gap-2">
-                <span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-[10px] uppercase font-bold rounded border border-cyan-500/20">Payment Processing</span>
-                <span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-[10px] uppercase font-bold rounded border border-cyan-500/20">System Interfacing</span>
+        <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
+            <span class="h-px w-12 bg-cyan-500"></span>
+            Functional Ownership
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="space-y-4">
+                <h3 class="text-xl font-mono text-cyan-400">01. Colorado FAMLI | Interfaces and Payment Systems</h3>
+                <p class="text-gray-400 leading-relaxed">
+                    Functional Lead for the Payments and Interface modules within the statewide benefits and tax. Designed the logic for premium collections, employer financial tracking, and secure data exchange between Salesforce and external state financial systems.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-[10px] uppercase font-bold rounded border border-cyan-500/20">Payment Processing</span>
+                    <span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-[10px] uppercase font-bold rounded border border-cyan-500/20">System Interfacing</span>
+                </div>
+            </div>
+
+            <div id="FuncOwner" class="space-y-4">
+                <h3 class="text-xl font-mono text-indigo-400">02. DC PFL | Benefit Architecture</h3>
+                <p class="text-gray-400 leading-relaxed">
+                    Directed the translation of Medical and Bonding Leave into functional system journeys. Owned the requirements for eligibility determination and the claimant intake experience.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-indigo-500/10 text-indigo-400 text-[10px] uppercase font-bold rounded border border-indigo-400/20">Statutory Analysis</span>
+                    <span class="px-2 py-1 bg-indigo-500/10 text-indigo-400 text-[10px] uppercase font-bold rounded border border-indigo-400/20">Claimant UX</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech-stack" class="max-w-6xl mx-auto px-6 py-20 border-t border-white/5">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-4">
+            <div>
+                <h2 class="text-3xl font-bold">Technical Ecosystem</h2>
+                <p class="text-gray-500 mt-2">The tools and frameworks I use to bridge policy and implementation.</p>
             </div>
         </div>
 
-        <!-- DC: Policy-to-Platform -->
-        <div id = "FuncOwner" class="space-y-4">
-            <h3 class="text-xl font-mono text-indigo-400">02. DC PFL | Benefit Architecture</h3>
-            <p class="text-gray-400 leading-relaxed">
-                Directed the translation of Medical and Bonding Leave into functional system journeys. Owned the requirements for eligibility determination and the claimant intake experience.
-            </p>
-            <div class="flex flex-wrap gap-2">
-                <span class="px-2 py-1 bg-indigo-500/10 text-indigo-400 text-[10px] uppercase font-bold rounded border border-indigo-400/20">Statutory Analysis</span>
-                <span class="px-2 py-1 bg-indigo-500/10 text-indigo-400 text-[10px] uppercase font-bold rounded border border-indigo-400/20">Claimant UX</span>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass p-6 rounded-2xl border border-white/5">
+                <h4 class="mono text-cyan-400 text-sm mb-4 uppercase tracking-widest">Platform</h4>
+                <ul class="space-y-3">
+                    <li class="flex justify-between items-center text-sm">
+                        <span class="text-gray-300">Public Sector Solutions (PSS)</span>
+                        <span class="text-xs text-gray-600">Expert</span>
+                    </li>
+                    <li class="flex justify-between items-center text-sm">
+                        <span class="text-gray-300">Flow Builder</span>
+                        <span class="text-xs text-gray-600">Advanced</span>
+                    </li>
+                    <li class="flex justify-between items-center text-sm">
+                        <span class="text-gray-300">Data Loader</span>
+                        <span class="text-xs text-gray-600">Migration</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="glass p-6 rounded-2xl border border-white/5">
+                <h4 class="mono text-indigo-400 text-sm mb-4 uppercase tracking-widest">Integration</h4>
+                <ul class="space-y-3">
+                    <li class="flex justify-between items-center text-sm">
+                        <span class="text-gray-300">MuleSoft (Middleware)</span>
+                        <span class="text-xs text-gray-600">Functional Design</span>
+                    </li>
+                    <li class="flex justify-between items-center text-sm">
+                        <span class="text-gray-300">REST / SOAP APIs</span>
+                        <span class="text-xs text-gray-600">Postman</span>
+                    </li>
+                    <li class="flex justify-between items-center text-sm">
+                        <span class="text-gray-300">Batch Job Scheduling</span>
+                        <span class="text-xs text-gray-600">Lead</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="glass p-6 rounded-2xl border border-white/5">
+                <h4 class="mono text-emerald-400 text-sm mb-4 uppercase tracking-widest">Delivery</h4>
+                <ul class="space-y-3">
+                    <li class="flex justify-between items-center text-sm">
+                        <span class="text-gray-300">Azure DevOps / JIRA</span>
+                        <span class="text-xs text-gray-600">Agile</span>
+                    </li>
+                    <li class="flex justify-between items-center text-sm">
+                        <span class="text-gray-300">Lucidchart / Visio</span>
+                        <span class="text-xs text-gray-600">Expert</span>
+                    </li>
+                    <li class="flex justify-between items-center text-sm">
+                        <span class="text-gray-300">UAT Strategy</span>
+                        <span class="text-xs text-gray-600">Lead</span>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
-</section>
-<section id="tech-stack" class="max-w-6xl mx-auto px-6 py-20 border-t border-white/5">
-    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-4">
-        <div>
-            <h2 class="text-3xl font-bold">Technical Ecosystem</h2>
-            <p class="text-gray-500 mt-2">The tools and frameworks I use to bridge policy and implementation.</p>
-        </div>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Category 1: Salesforce Core -->
-        <div class="glass p-6 rounded-2xl border border-white/5">
-            <h4 class="mono text-cyan-400 text-sm mb-4 uppercase tracking-widest">Platform</h4>
-            <ul class="space-y-3">
-                <li class="flex justify-between items-center text-sm">
-                    <span class="text-gray-300">Public Sector Solutions (PSS)</span>
-                    <span class="text-xs text-gray-600">Expert</span>
-                </li>
-                <li class="flex justify-between items-center text-sm">
-                    <span class="text-gray-300">Flow Builder</span>
-                    <span class="text-xs text-gray-600">Advanced</span>
-                </li>
-                <li class="flex justify-between items-center text-sm">
-                    <span class="text-gray-300">Data Loader</span>
-                    <span class="text-xs text-gray-600">Migration</span>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Category 2: Interfaces & Integration -->
-        <div class="glass p-6 rounded-2xl border border-white/5">
-            <h4 class="mono text-indigo-400 text-sm mb-4 uppercase tracking-widest">Integration</h4>
-            <ul class="space-y-3">
-                <li class="flex justify-between items-center text-sm">
-                    <span class="text-gray-300">MuleSoft (Middleware)</span>
-                    <span class="text-xs text-gray-600">Functional Design</span>
-                </li>
-                <li class="flex justify-between items-center text-sm">
-                    <span class="text-gray-300">REST / SOAP APIs</span>
-                    <span class="text-xs text-gray-600">Postman</span>
-                </li>
-                <li class="flex justify-between items-center text-sm">
-                    <span class="text-gray-300">Batch Job Scheduling</span>
-                    <span class="text-xs text-gray-600">Lead</span>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Category 3: Methodology & Delivery -->
-        <div class="glass p-6 rounded-2xl border border-white/5">
-            <h4 class="mono text-emerald-400 text-sm mb-4 uppercase tracking-widest">Delivery</h4>
-            <ul class="space-y-3">
-                <li class="flex justify-between items-center text-sm">
-                    <span class="text-gray-300">Azure DevOps / JIRA</span>
-                    <span class="text-xs text-gray-600">Agile</span>
-                </li>
-                <li class="flex justify-between items-center text-sm">
-                    <span class="text-gray-300">Lucidchart / Visio</span>
-                    <span class="text-xs text-gray-600">Expert</span>
-                </li>
-                <li class="flex justify-between items-center text-sm">
-                    <span class="text-gray-300">UAT Strategy</span>
-                    <span class="text-xs text-gray-600">Lead</span>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- Bento Grid Section -->
     <main id="work" class="max-w-6xl mx-auto px-6 py-20">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            
-            <!-- CO FAMLI Card -->
             <div class="md:col-span-2 glass p-8 rounded-3xl bento-card">
                 <i data-lucide="bar-chart-3" class="text-cyan-400 mb-4"></i>
                 <h3 class="text-2xl font-bold mb-2">Colorado FAMLI</h3>
@@ -312,7 +300,6 @@
                 </div>
             </div>
 
-            <!-- DC PFL Card -->
             <div class="glass p-8 rounded-3xl bento-card">
                 <i data-lucide="users" class="text-indigo-400 mb-4"></i>
                 <h3 class="text-2xl font-bold mb-2">DC Paid Family Leave</h3>
@@ -322,14 +309,6 @@
                 </div>
             </div>
 
-            <!-- AI Strategy Card -->
-           <!--<div id="ai" class="glass p-8 rounded-3xl bento-card">
-                <i data-lucide="zap" class="text-yellow-400 mb-4"></i>
-                <h3 class="text-2xl font-bold mb-2">Agentic UAT</h3>
-                <p class="text-gray-400">Leveraging AI prompt engineering to synthesize thousands of user feedback points, accelerating implementation by 40%.</p>
-            </div> --!>
-
-            <!-- Salesforce Cert Card -->
             <div class="md:col-span-2 glass p-8 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6 border-l-4 border-l-cyan-500">
                 <div>
                     <h3 class="text-2xl font-bold">Platform Fluency</h3>
@@ -339,43 +318,52 @@
                     Salesforce BA Certified
                 </div>
             </div>
-
         </div>
     </main>
-<!-- Today I Learned Section -->
-<section id="til" class="max-w-6xl mx-auto px-6 py-20 border-t border-white/5">
-    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-4">
-        <div>
-            <h2 class="text-3xl font-bold flex items-center gap-4">
-                <span class="h-px w-12 bg-indigo-500"></span>
-                Today I Learned
-            </h2>
-            <p class="text-gray-500 mt-2">A feed of technical snippets and professional insights.</p>
-        </div>
-    </div>
 
-    <!-- This is where the JavaScript will "inject" the cards -->
-   <div class="til-grid grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-  {% for post in site.posts %}
-    <a href="{{ post.url | relative_url }}" class="til-card-link block">
-      <article class="til-card flex flex-col gap-3 h-full">
-        <div class="flex justify-between items-center">
-          <span class="til-tag">#{{ post.category }}</span>
-          <time class="text-[10px] text-gray-600 mono">{{ post.date | date: "%b %d, %Y" }}</time>
+    <!-- Today I Learned Section -->
+    <section id="til" class="max-w-6xl mx-auto px-6 py-20 border-t border-white/5">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-4">
+            <div>
+                <h2 class="text-3xl font-bold flex items-center gap-4">
+                    <span class="h-px w-12 bg-indigo-500"></span>
+                    Field Notes & Insights
+                </h2>
+                <p class="text-gray-500 mt-2">A feed of technical snippets and professional insights.</p>
+            </div>
         </div>
-        <h3 class="text-lg font-bold text-gray-200">{{ post.title }}</h3>
-        <p class="text-sm text-gray-400 leading-relaxed">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
-        <span class="text-xs text-indigo-400 font-medium mt-auto flex items-center gap-1 hover:text-indigo-300">
-            Read full note <i data-lucide="arrow-right" class="w-3 h-3"></i>
-        </span>
-      </article>
-    </a>
-  {% endfor %}
-</div>
-</section>
+
+        <!-- The Post Cards Grid Loop -->
+        <div class="til-grid grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+            {% for post in site.posts limit: 2 %}
+            <a href="{{ post.url | relative_url }}" class="til-card-link block">
+              <article class="til-card flex flex-col gap-3 h-full">
+                <div class="flex justify-between items-center">
+                  <span class="til-tag">#{{ post.category }}</span>
+                  <time class="text-[10px] text-gray-600 mono">{{ post.date | date: "%b %d, %Y" }}</time>
+                </div>
+                <h3 class="text-lg font-bold text-gray-200">{{ post.title }}</h3>
+                <p class="text-sm text-gray-400 leading-relaxed">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                <span class="text-xs text-indigo-400 font-medium mt-auto flex items-center gap-1">
+                    Read note →
+                </span>
+              </article>
+            </a>
+            {% endfor %}
+        </div>
+
+        <!-- FIX 2: Relocated Button down here, beneath the cards where it logically belongs -->
+        <div class="mt-12 text-center">
+            <a href="{{ '/blog/' | relative_url }}" 
+               class="inline-flex items-center gap-2 px-6 py-3 glass rounded-xl border border-white/5 hover:border-indigo-500/50 hover:text-indigo-400 transition text-sm font-medium mono uppercase tracking-wider">
+                Explore All Field Notes 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+        </div>
+    </section>
 
     <!-- Footer -->
-   <footer class="py-20 text-center border-t border-white/5">
+    <footer class="py-20 text-center border-t border-white/5">
         <p class="mono text-xs text-gray-500 uppercase tracking-widest">
             Based in DMV Area | Have a question? <a href="mailto:thomas@kuttiyil.net">Email</a> or Connect on <a href="https://linkedin.com/in/thomas-tharakan/">LinkedIn!</a>
         </p>
@@ -383,7 +371,6 @@
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
-      // Clean, single initializer for UI icons
       document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
       });

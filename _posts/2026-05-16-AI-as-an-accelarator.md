@@ -25,7 +25,7 @@ There is no universal answer on how to use AI. Your workflow is unique to you. Y
 I started injecting AI into my workflow gradually, increasing complexity over time. I'm still not an AI Superuser who has five different agents working under me or anything. Currently, I leverage AI—and when I say AI, I'm referring to publicly available or enterprise AI LLMs.
 
 **Here are some of the areas where I offload work to AI:**
- 
+
 *P.S. This is by no means an exhaustive list*
 
 | AI Use Area | Description |
@@ -63,6 +63,7 @@ This is easiest to explain with a direct contrast:
 | Lazy Prompt | Context-Rich Prompt |
 | :--- | :--- |
 | Write a user story for a feature to prompt a user to view bank disclosures prior to selecting a prepaid card payment. | Assume yourself as a Senior Business Analyst on a public benefits portal that uses an external banking vendor. The business needs users to view the banking terms and disclosures prior to selecting their prepaid card solution as a payment method. Write user stories considering a modal popup that will track whether the user clicks the link before letting them continue. |
+
 Essentially context rich prompting is giving the LLM enough information to work with so that it can generate an answer that is more detailed and tailored for your use case.
 ### Where do I stop?
 I intentionally added this header because when it comes to using AI, you absolutely must know when to **STOP**. Before you paste a single line of project work into an AI tool, you have to understand the boundaries of enterprise consulting.

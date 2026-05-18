@@ -79,47 +79,33 @@
 <body class="selection:bg-cyan-500/30">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 px-6 py-4">
-        <div class="max-w-6xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center">
-            <!-- Brand -->
-            <span class="mono text-cyan-400 font-bold tracking-tighter uppercase text-xs md:text-sm">Thomas Tharakan Kuttiyil Oommen</span>
-            
-            <!-- Links Container -->
-        <div class="flex items-center">
-    <!-- REMOVED 'hidden' and adjusted spacing dynamically: space-x-4 on mobile, space-x-8 on desktop -->
-    <div class="flex items-center space-x-4 md:space-x-8 text-sm font-medium">
-        <a href="#expertise" class="hover:text-cyan-400 transition py-2">Expertise</a>
-        <a href="#tech-stack" class="hover:text-cyan-400 transition py-2">Tech Stack</a>
-        <a href="#work" class="hover:text-cyan-400 transition py-2">Projects</a>
-        <a href="{{ '/blog/' | relative_url }}" class="text-indigo-400 hover:text-indigo-300 transition py-2 font-semibold">Insights</a>
-    </div>
-</div>
-            
-                <!-- Contact & Social -->
-                <div class="flex items-center gap-4">
-                    <a href="mailto:thomas@kuttiyil.net" 
-                       class="px-4 py-2 bg-cyan-500/10 border border-cyan-500/50 rounded-lg text-cyan-400 hover:bg-cyan-500/20 transition text-sm font-medium">
-                        Contact
-                    </a>
-                    
-                    <a href="https://linkedin.com/in/thomas-tharakan/" target="_blank" class="text-gray-400 hover:text-cyan-400 transition" aria-label="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                            <rect width="4" height="12" x="2" y="9"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                    </a>
+    <header class="relative flex items-center justify-between py-6 px-4 md:px-0 z-50">
+    <!-- Your Logo / Brand Name -->
+    <a href="{{ '/' | relative_url }}" class="font-bold text-white text-lg tracking-tight">
+        Portfolio<span class="text-cyan-400">.</span>
+    </a>
 
-                    <a href="https://github.com/tharakanenator" target="_blank" class="text-gray-400 hover:text-cyan-400 transition" aria-label="GitHub">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
-                            <path d="M9 18c-4.51 2-5-2-7-2"></path>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
+    <!-- Hamburger Menu Button (Visible ONLY on Mobile) -->
+    <button id="menu-toggle" class="block md:hidden text-gray-400 hover:text-white focus:outline-none z-50 transition-colors" aria-label="Toggle Menu">
+        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </button>
+
+    <!-- Navigation Menu Wrapper -->
+    <!-- Mobile: Absolute overlay hidden by default | Desktop: Standard horizontal inline flex row -->
+    <nav id="menu-links" class="hidden md:flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 absolute md:relative top-full left-0 w-full md:w-auto bg-black/95 md:bg-transparent p-6 md:p-0 border-b border-white/5 md:border-none backdrop-blur-md md:backdrop-blur-none text-sm font-medium">
+        <a href="{{ '/' | relative_url }}#expertise" class="w-full md:w-auto hover:text-cyan-400 transition py-2 border-b border-white/5 md:border-none">Expertise</a>
+        <a href="{{ '/' | relative_url }}#tech-stack" class="w-full md:w-auto hover:text-cyan-400 transition py-2 border-b border-white/5 md:border-none">Tech Stack</a>
+        <a href="{{ '/' | relative_url }}#work" class="w-full md:w-auto hover:text-cyan-400 transition py-2 border-b border-white/5 md:border-none">Projects</a>
+        <a href="{{ '/blog/' | relative_url }}" class="w-full md:w-auto text-indigo-400 hover:text-indigo-300 transition py-2 font-semibold border-b border-white/5 md:border-none">Insights</a>
+        <a href="{{ '/' | relative_url }}#contact" class="w-full md:w-auto hover:text-cyan-400 transition py-2 border-b border-white/5 md:border-none">Contact</a>
+        
+        <!-- Social Profiles -->
+        <a href="https://linkedin.com" target="_blank" rel="noopener" class="w-full md:w-auto text-gray-400 hover:text-white transition py-2 border-b border-white/5 md:border-none">LinkedIn</a>
+        <a href="https://github.com" target="_blank" rel="noopener" class="w-full md:w-auto text-gray-400 hover:text-white transition py-2">GitHub</a>
     </nav>
+</header>
 
     <!-- Hero Section -->
     <header class="relative pt-48 pb-32 px-6">
@@ -376,5 +362,34 @@
         lucide.createIcons();
       });
     </script>
+    <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuLinks = document.getElementById('menu-links');
+    const menuIcon = document.getElementById('menu-icon');
+
+    menuToggle.addEventListener('click', () => {
+        // Toggle the visibility layout class
+        menuLinks.classList.toggle('hidden');
+        menuLinks.classList.toggle('flex');
+
+        // Dynamically change the icon between Hamburger and Close (X)
+        if (menuLinks.classList.contains('flex')) {
+            menuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>`;
+        } else {
+            menuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>`;
+        }
+    });
+
+    // Optional: Close the menu automatically when a mobile layout navigation link is clicked
+    menuLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (!menuLinks.classList.contains('hidden') && window.innerWidth < 768) {
+                menuLinks.classList.add('hidden');
+                menuLinks.classList.remove('flex');
+                menuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>`;
+            }
+        });
+    });
+</script>
 </body>
 </html>

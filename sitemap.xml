@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full px-4 md:px-0">
     {% for post in site.posts %}
     <!-- FIXED: Added no-underline to the outer block to kill default browser link decoration -->

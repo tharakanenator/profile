@@ -3,3 +3,5 @@ description: Senior Functional Consultant Portfolio
 baseurl: "" # Leave empty if your site is at the root
 url: "https://kuttiyil.net"
 markdown: kramdown
+plugins:
+  - jekyll-sitemap

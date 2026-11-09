@@ -1,5 +1,7 @@
 ---
 layout: post
+redirect_from:
+  - /clientrelationships/2026/05/13/Client-Relationships.html
 title: "Stakeholder Relationships"
 date: 2026-05-13
 category: Clientrelationships

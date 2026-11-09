@@ -6,6 +6,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | Thomas Tharakan Kuttiyil Oommen</title>
+    <meta name="description" content="{{ page.description | default: site.description | strip_html | escape }}">
+    <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+    <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+    <meta property="og:site_name" content="Thomas Tharakan Kuttiyil Oommen">
+    <meta property="og:title" content="{{ page.title | escape }}">
+    <meta property="og:description" content="{{ page.description | default: site.description | strip_html | escape }}">
+    <meta property="og:url" content="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+    <meta property="og:image" content="{{ '/profile.jpg' | absolute_url }}">
+    {% if page.layout == 'post' %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">{% endif %}
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     
     <!-- Custom Layout Typography & Font Styles -->
@@ -94,9 +103,15 @@
 
     <!-- Footer System -->
     <footer class="py-20 text-center border-t border-white/5">
+        <ul class="mb-8 space-y-2 text-sm">
+            {% for post in site.posts %}
+            <li><a href="{{ post.url | relative_url }}" class="text-gray-400 hover:text-cyan-400 transition">{{ post.title }}</a></li>
+            {% endfor %}
+        </ul>
         <p class="mono text-xs text-gray-500 uppercase tracking-widest">
             Based in DMV Area | Have a question? <a href="mailto:thomas@kuttiyil.net">Email</a> or Connect on <a href="https://linkedin.com/in/thomas-tharakan/">LinkedIn!</a>
         </p>
+        <p class="mt-4 text-[10px] text-gray-600">Views expressed on this site are my own and do not represent those of my employer or any client.</p>
     </footer>
 
     <!-- Scripts Engine Initialization -->

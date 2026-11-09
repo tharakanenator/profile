@@ -1,5 +1,7 @@
 ---
 layout: post
+redirect_from:
+  - /career/2026/10/17/why-networking-actually-matters.md.html
 title: "Why Networking Actually Matters (And How Introverts Can Master It)"
 date: 2026-10-17
 category: Career

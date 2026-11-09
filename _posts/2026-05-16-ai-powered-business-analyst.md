@@ -1,5 +1,7 @@
 ---
 layout: post
+redirect_from:
+  - /aitools/2026/05/16/AI-Powered-Business-Analyst-Copy.html
 title: "The AI-Powered Business Analyst: How to Supercharge Your BA Workflow"
 date: 2026-05-16
 category: AITools

@@ -1,5 +1,7 @@
 ---
 layout: post
+redirect_from:
+  - /useracceptancetesting/2026/05/14/UAT-Facilitation.html
 title: "Performing Large Group Testing"
 date: 2026-05-14
 category: Useracceptancetesting

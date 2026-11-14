@@ -6,3 +6,11 @@ markdown: kramdown
 permalink: /blog/:title/
 plugins:
   - jekyll-redirect-from
+  - jekyll-feed
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
+  - src
+  - README.md

@@ -5,17 +5,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | Thomas Tharakan Kuttiyil Oommen</title>
+    {% assign page_title = page.full_title | default: page.title | append: ' | Thomas Tharakan Kuttiyil Oommen' %}
+    {% if page.full_title %}{% assign page_title = page.full_title %}{% endif %}
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>{{ page_title }}</title>
     <meta name="description" content="{{ page.description | default: site.description | strip_html | escape }}">
+    <meta name="msvalidate.01" content="465BC0C4029B2A06C8BADE42B4683C2F">
     <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+    {% feed_meta %}
     <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
     <meta property="og:site_name" content="Thomas Tharakan Kuttiyil Oommen">
-    <meta property="og:title" content="{{ page.title | escape }}">
+    <meta property="og:title" content="{{ page_title | escape }}">
     <meta property="og:description" content="{{ page.description | default: site.description | strip_html | escape }}">
     <meta property="og:url" content="{{ page.url | replace: 'index.html', '' | absolute_url }}">
-    <meta property="og:image" content="{{ '/profile.jpg' | absolute_url }}">
+    <meta property="og:image" content="{{ '/og-image.png' | absolute_url }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
     {% if page.layout == 'post' %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">{% endif %}
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="stylesheet" href="{{ '/assets/css/tailwind.css' | relative_url }}">
     
     <!-- Custom Layout Typography & Font Styles -->
     <style>
@@ -35,8 +47,25 @@
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid var(--glass-border);
         }
+
+        .gradient-text { background: linear-gradient(90deg, #22d3ee, #818cf8); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .bento-card:hover { border-color: #22d3ee; transition: 0.3s; transform: translateY(-4px); }
+
+        nav { animation: nav-entry 0.8s ease-out; }
+        @keyframes nav-entry {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .til-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            transition: 0.3s;
+        }
+        .til-card:hover { border-color: #818cf8; transform: translateY(-2px); background: rgba(255, 255, 255, 0.05); }
+        .til-tag { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: #818cf8; text-transform: uppercase; letter-spacing: 0.05em; }
     </style>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <!-- MailerLite Universal -->
     <script>
         (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
@@ -68,6 +97,7 @@
 
                 <!-- Desktop Core Layout Navigation Links -->
                 <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="{{ '/' | relative_url }}#about" class="text-gray-300 hover:text-cyan-400 transition">About</a>
                     <a href="{{ '/' | relative_url }}#expertise" class="text-gray-300 hover:text-cyan-400 transition">Expertise</a>
                     <a href="{{ '/' | relative_url }}#tech-stack" class="text-gray-300 hover:text-cyan-400 transition">Tech Stack</a>
                     <a href="{{ '/' | relative_url }}#work" class="text-gray-300 hover:text-cyan-400 transition">Projects</a>
@@ -78,7 +108,7 @@
                     <a href="https://linkedin.com/in/thomas-tharakan" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition flex items-center group ml-2" aria-label="LinkedIn">
                         <svg class="w-4 h-4 fill-gray-400 group-hover:fill-white transition-colors" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                     </a>
-                    <a href="https://github.com" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition flex items-center group" aria-label="GitHub">
+                    <a href="https://github.com/tharakanenator" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition flex items-center group" aria-label="GitHub">
                         <svg class="w-4 h-4 fill-gray-400 group-hover:fill-white transition-colors" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                     </a>
                 </nav>
@@ -86,6 +116,7 @@
 
             <!-- Mobile Interactive Dropdown Window Drawer Layout -->
             <nav id="menu-links" class="hidden absolute top-[76px] inset-x-0 mx-4 flex-col items-start gap-1 glass bg-neutral-950/95 backdrop-blur-xl p-6 rounded-2xl border border-white/5 text-sm font-medium z-50 max-h-[calc(100vh-120px)] overflow-y-auto">
+                <a href="{{ '/' | relative_url }}#about" class="w-full text-gray-300 hover:text-cyan-400 transition py-3 border-b border-white/5">About</a>
                 <a href="{{ '/' | relative_url }}#expertise" class="w-full text-gray-300 hover:text-cyan-400 transition py-3 border-b border-white/5">Expertise</a>
                 <a href="{{ '/' | relative_url }}#tech-stack" class="w-full text-gray-300 hover:text-cyan-400 transition py-3 border-b border-white/5">Tech Stack</a>
                 <a href="{{ '/' | relative_url }}#work" class="w-full text-gray-300 hover:text-cyan-400 transition py-3 border-b border-white/5">Projects</a>
@@ -96,7 +127,7 @@
                     <svg class="w-4 h-4 fill-gray-400 group-hover:fill-white transition-colors" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                     <span>LinkedIn</span>
                 </a>
-                <a href="https://github.com" target="_blank" rel="noopener" class="w-full text-gray-400 hover:text-white transition py-3 flex items-center gap-2 group">
+                <a href="https://github.com/tharakanenator" target="_blank" rel="noopener" class="w-full text-gray-400 hover:text-white transition py-3 flex items-center gap-2 group">
                     <svg class="w-4 h-4 fill-gray-400 group-hover:fill-white transition-colors" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                     <span>GitHub</span>
                 </a>
@@ -106,7 +137,7 @@
 
     <!-- Core Expanded Content Wrapper Block -->
     <!-- Changed max-w-4xl to max-w-7xl to give cards wide breathing room -->
-    <main class="max-w-7xl mx-auto px-4 md:px-6 pb-20">
+    <main class="{% unless page.bare %}max-w-7xl mx-auto px-4 md:px-6 pb-20{% endunless %}">
         {{ content }}
     </main>
 
@@ -124,7 +155,7 @@
     </footer>
 
     <!-- Scripts Engine Initialization -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@1.73.0/dist/umd/lucide.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();

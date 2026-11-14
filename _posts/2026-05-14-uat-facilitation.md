@@ -4,7 +4,7 @@ redirect_from:
   - /useracceptancetesting/2026/05/14/UAT-Facilitation.html
 title: "The Art of Negotiating the \"Happy Medium\" in Large-Scale UAT"
 date: 2026-05-14
-category: Useracceptancetesting
+category: UAT
 tags: [Business Analyst, UAT, User Acceptance Testing]
 description: "Discover how should a Business Analyst facilitate large group User Acceptance Testing Sessions"
 ---

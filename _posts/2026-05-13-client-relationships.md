@@ -4,7 +4,7 @@ redirect_from:
   - /clientrelationships/2026/05/13/Client-Relationships.html
 title: "Beyond the Playbook: The Human Element of Client Relationships"
 date: 2026-05-13
-category: Clientrelationships
+category: Clients
 tags: [Business Analyst, Client, Client Relationships]
 description: "Discover how should a Business Analyst maintain client relationships"
 ---

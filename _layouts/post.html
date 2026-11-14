@@ -4,7 +4,22 @@ layout: default
 <!-- Individual Article Wrapper -->
 <!-- Self-contained max-w-3xl prevents lines from over-stretching across the new wide global main container -->
 <article class="max-w-3xl mx-auto px-4 md:px-6 pb-20">
-    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": {{ page.title | jsonify }},
+      "description": {{ page.description | jsonify }},
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+      "mainEntityOfPage": "{{ page.url | absolute_url }}",
+      "image": "{{ '/og-image.png' | absolute_url }}",
+      "author": { "@type": "Person", "name": "Thomas Tharakan Kuttiyil Oommen", "url": "{{ '/' | absolute_url }}" }
+    }
+    </script>
+
+    <a href="{{ '/blog/' | relative_url }}" class="inline-block mb-8 text-xs mono uppercase tracking-widest text-indigo-400 hover:text-indigo-300 transition">&larr; All field notes</a>
+
     <!-- Post Header Block -->
     <header class="mb-12 border-b border-white/5 pb-8">
         <div class="flex items-center space-x-3 mb-3">
@@ -39,5 +54,25 @@ layout: default
     <div class="mt-16">
         <div class="ml-embedded" data-form="8FUlWm"></div>
     </div>
+
+    <!-- Related posts: the two most recent other posts -->
+    {% assign shown = 0 %}
+    {% capture related %}
+        {% for post in site.posts %}
+            {% if post.url != page.url and shown < 2 %}
+            {% assign shown = shown | plus: 1 %}
+            <a href="{{ post.url | relative_url }}" class="block p-5 glass rounded-2xl border border-white/5 hover:border-indigo-500/50 transition no-underline">
+                <time class="text-[10px] text-gray-500 mono">{{ post.date | date: "%b %d, %Y" }}</time>
+                <h3 class="mt-2 text-base font-bold text-gray-200 break-words">{{ post.title }}</h3>
+            </a>
+            {% endif %}
+        {% endfor %}
+    {% endcapture %}
+    {% if shown > 0 %}
+    <section class="mt-16">
+        <h2 class="mb-4 text-xs mono uppercase tracking-widest text-gray-500">Keep reading</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">{{ related }}</div>
+    </section>
+    {% endif %}
 
 </article>

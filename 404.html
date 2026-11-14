@@ -1,0 +1,16 @@
+---
+layout: default
+title: "Page Not Found"
+description: "The page you were looking for could not be found."
+permalink: /404.html
+sitemap: false
+---
+<section class="max-w-3xl mx-auto px-4 md:px-6 py-24 text-center">
+    <p class="mono text-xs uppercase tracking-widest text-cyan-400 mb-4">Error 404</p>
+    <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">Page not found</h1>
+    <p class="text-gray-400 leading-relaxed mb-10">That page may have moved or never existed. Try the home page or browse the latest field notes.</p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="{{ '/' | relative_url }}" class="w-full sm:w-auto px-6 py-3 bg-white text-black font-bold rounded-xl hover:bg-cyan-400 transition text-sm">Back to home</a>
+        <a href="{{ '/blog/' | relative_url }}" class="w-full sm:w-auto px-6 py-3 glass rounded-xl border border-white/10 hover:border-cyan-500/50 hover:text-cyan-400 transition text-sm">Field notes</a>
+    </div>
+</section>

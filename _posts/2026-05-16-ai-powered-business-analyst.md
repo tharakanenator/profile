@@ -4,7 +4,7 @@ redirect_from:
   - /aitools/2026/05/16/AI-Powered-Business-Analyst-Copy.html
 title: "The Business Analyst's AI Cheat Sheet"
 date: 2026-05-16
-category: AITools
+category: AI
 tags: [Business Analyst, AI Tools, Prompt Engineering, Agile User Stories]
 description: "Discover how Business Analysts can leverage AI tools like ChatGPT, Claude, and Gemini to automate documentation, cleanup data, and accelerate system design safely."
 ---

@@ -3,7 +3,7 @@ layout: default
 title: "Insights & Field Notes"
 ---
 
-<section class="max-w-6xl mx-auto px-6 pb-24">
+<section class="max-w-6xl mx-auto px-0 md:px-6 pb-24">
     <!-- Clean Blog Header with Centered Ambient Glow -->
     <header class="relative mb-20 py-12 text-center overflow-hidden">
         <!-- The Subtle Glow Layer (Centered behind text) -->
@@ -20,15 +20,15 @@ title: "Insights & Field Notes"
     </header>
 
     <!-- The Grid of All Posts -->
-   <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full px-4 md:px-0">
+   <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
     {% for post in site.posts %}
     <!-- FIXED: Added no-underline to the outer block to kill default browser link decoration -->
     <a href="{{ post.url | relative_url }}" class="block p-6 glass rounded-3xl border border-white/5 hover:border-indigo-500/50 hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between h-full no-underline">
         <!-- FIXED: w-full container wrap ensures inner elements respect card bounds -->
         <div class="w-full">
             <!-- FIXED: Added gap-2 and shrink-0 to prevent category text from smashing into the date on mobile -->
-            <div class="flex justify-between items-center mb-4 gap-2">
-                <span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 mono uppercase text-[10px] border border-cyan-500/20 rounded shrink-0">
+            <div class="flex flex-wrap justify-between items-center mb-4 gap-2">
+                <span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 mono uppercase text-[10px] border border-cyan-500/20 rounded min-w-0 max-w-full break-all">
                     #{{ post.category }}
                 </span>
                 <time class="text-[10px] text-gray-500 mono shrink-0">{{ post.date | date: "%b %d, %Y" }}</time>

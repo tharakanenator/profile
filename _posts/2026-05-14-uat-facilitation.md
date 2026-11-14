@@ -2,14 +2,12 @@
 layout: post
 redirect_from:
   - /useracceptancetesting/2026/05/14/UAT-Facilitation.html
-title: "Performing Large Group Testing"
+title: "The Art of Negotiating the \"Happy Medium\" in Large-Scale UAT"
 date: 2026-05-14
 category: Useracceptancetesting
 tags: [Business Analyst, UAT, User Acceptance Testing]
 description: "Discover how should a Business Analyst facilitate large group User Acceptance Testing Sessions"
 ---
-
-# The Art of Negotiating the "Happy Medium" in Large-Scale UAT
 
 User Acceptance Testing (UAT) is often the most volatile phase of the software development lifecycle. When you move from a controlled QA environment to testing with a large, diverse audience of stakeholders and end-users, the complexity doesn't just add up—it multiplies.
 

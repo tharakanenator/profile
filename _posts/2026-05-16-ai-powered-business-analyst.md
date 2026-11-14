@@ -2,14 +2,12 @@
 layout: post
 redirect_from:
   - /aitools/2026/05/16/AI-Powered-Business-Analyst-Copy.html
-title: "The AI-Powered Business Analyst: How to Supercharge Your BA Workflow"
+title: "The Business Analyst's AI Cheat Sheet"
 date: 2026-05-16
 category: AITools
 tags: [Business Analyst, AI Tools, Prompt Engineering, Agile User Stories]
 description: "Discover how Business Analysts can leverage AI tools like ChatGPT, Claude, and Gemini to automate documentation, cleanup data, and accelerate system design safely."
 ---
-
-# The Business Analyst's AI Cheat Sheet
 
 You have Claude, Gemini, Co-Pilot, ChatGPT, Grok—but do you know where and how to use them? I'll be honest, when ChatGPT rolled out to the public, I was a little skeptical of its capabilities. I neither believed it could make a dent in the work I do, nor thought it would be capable of surpassing the skillset I have acquired over my career.
 
